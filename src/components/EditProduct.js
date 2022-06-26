@@ -15,9 +15,9 @@ export function EditProduct(){
        }
            
     
-    })
+    },)
 
-async    function getData() {
+ async function getData() {
         let res = await axios.get('https://614eacb5b4f6d30017b4833b.mockapi.io/products/'+param.id)
         console.log(res.data);
         let data = res.data;
@@ -46,16 +46,16 @@ async    function getData() {
             <h2 className="mb-4">Edit Product</h2>
   <div className="form-group">
     <label htmlFor="exampleInputname">Product Name</label>
-    <input type="text" value={name}  onChange={(e)=>setname(e.target.value)} id="exampleInputname" aria-describedby="emailHelp"/>
+    <input className="form-control" type="text" value={name}  onChange={(e)=>setname(e.target.value)} id="exampleInputname" aria-describedby="emailHelp"/>
     
     <label htmlFor="exampleInputnum">Product Price</label>
-    <input type="integer" value={price}  onChange={(e)=>setprice(e.target.value)} id="exampleInputnum" aria-describedby="emailHelp"/>
+    <input className="form-control"type="integer" value={price}  onChange={(e)=>setprice(e.target.value)} id="exampleInputnum" aria-describedby="emailHelp"/>
     
     <label htmlFor="exampleInputdis">Product model</label>
-    <input type="text" value={model}  onChange={(e)=>setmodel(e.target.value)} id="exampleInputdis" aria-describedby="emailHelp"/>
+    <input className="form-control" type="text" value={model}  onChange={(e)=>setmodel(e.target.value)} id="exampleInputdis" aria-describedby="emailHelp"/>
 
     <label htmlFor="exampleInputnum">No Units</label>
-    <input type="Number" value={units}  onChange={(e)=>setunits(e.target.value)} id="exampleInputnum" aria-describedby="emailHelp"/>
+    <input className="form-control" type="Number" value={units}  onChange={(e)=>setunits(e.target.value)} id="exampleInputnum" aria-describedby="emailHelp"/>
     
   </div>
 

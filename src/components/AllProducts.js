@@ -6,19 +6,19 @@ import axios from "axios";
 export function AllProducts(){
     useEffect(()=>{
         getData()
-    })
+    },)
     let context = useContext(prodContext);
     let navigate = useNavigate()
 
     async function getData() {
-          let respon = await axios.get('https://614eacb5b4f6d30017b4833b.mockapi.io/products')
-        context.setData(respon.data)
+          let res = await axios.get('https://614eacb5b4f6d30017b4833b.mockapi.io/products')
+        context.setData(res.data)
         
       }
 
   
 
-  async  function deleteItem(id){
+  async function deleteItem(id){
        await axios.delete("https://614eacb5b4f6d30017b4833b.mockapi.io/products/"+id);
        getData() 
     }
